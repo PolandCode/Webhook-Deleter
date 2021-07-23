@@ -27,16 +27,16 @@ def delete():
     requests.delete(webhook)
     check = requests.get(webhook)
     if check.status_code == 404:
-        print("\n [LOGS] WEBHOOK SUPRIMMER")
+        print("\n [LOGS] WEBHOOK DELTED NIGGA")
         os.system("pause >nul")  # Pause command in Batch (appuyer sur une touche pour quitter)
     elif check.status_code == 200:
-        print("\n [LOGS] WEBHOOK NON SUPPRIMER")
+        print("\n [LOGS] WEBHOOK NON DELTED F")
         os.system("pause >nul")
 
 test = requests.get(webhook)
 if test.status_code == 404:
-    print("\n [LOGS] WEBHOOK INVALIDE")
+    print("\n [LOGS] WEBHOOK INVALID")
     os.system("pause >nul")
 elif test.status_code == 200:
-    print("\n [LOGS] WEBHOOK VALIDE")
+    print("\n [LOGS] WEBHOOK VALID")
     delete()
